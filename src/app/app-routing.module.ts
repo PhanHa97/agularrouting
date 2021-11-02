@@ -10,6 +10,14 @@ const routes: Routes = [
         (m) => m.HomeTemplateModule
       ),
   },
+  // admin template - localhost: 4200/admin
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./pages/admin-template/admin-template.module').then(
+        (m) => m.AdminTemplateModule
+      ),
+  },
 ];
 
 @NgModule({
